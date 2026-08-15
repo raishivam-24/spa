@@ -1,0 +1,41 @@
+.not-found {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, var(--brown-900), var(--brown-950));
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.not-found-motif {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 360px;
+  height: 360px;
+  color: var(--gold-400);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.not-found-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 560px;
+}
+
+.not-found-title {
+  font-size: clamp(30px, 4vw, 42px);
+  color: var(--text-light);
+}
+
+.not-found-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-light-dim);
+}

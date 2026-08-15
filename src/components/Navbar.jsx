@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { contactCta, business } from "../data/siteData";
 import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#top" },
-  { label: "Services", href: "#services" },
-  { label: "Wellbeing", href: "#about" },
-  { label: "Visit Us", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 export default function Navbar() {
@@ -24,19 +26,34 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`} id="top">
       <div className="container navbar-inner">
-        <a href="#top" className="navbar-logo">
-          <span className="navbar-logo-mark">S</span>
+        <NavLink to="/" className="navbar-logo">
+          <img
+            src={logo}
+            alt="Serenity Salon & Wellness Spa"
+            className="navbar-logo-image"
+          />
+
           <span className="navbar-logo-text">
-            <span className="navbar-logo-title">Serenity</span>
-            <span className="navbar-logo-sub">Salon &amp; Wellness Spa</span>
+            <span className="navbar-logo-title">
+              Serenity
+            </span>
+
+            <span className="navbar-logo-sub">
+              Salon &amp; Wellness Spa
+            </span>
           </span>
-        </a>
+        </NavLink>
 
         <nav className="navbar-links">
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href}>
+            <NavLink
+              key={link.label}
+              to={link.to}
+              end={link.to === "/"}
+              className={({ isActive }) => (isActive ? "navbar-link-active" : "")}
+            >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -63,9 +80,15 @@ export default function Navbar() {
       {open && (
         <div className="navbar-mobile">
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setOpen(false)}>
+            <NavLink
+              key={link.label}
+              to={link.to}
+              end={link.to === "/"}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) => (isActive ? "navbar-link-active" : "")}
+            >
               {link.label}
-            </a>
+            </NavLink>
           ))}
           <a
             className="btn btn-gold navbar-mobile-cta"

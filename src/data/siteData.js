@@ -16,7 +16,7 @@ export const business = {
     instagram: "", // TODO: confirm client's Instagram handle/link
     justdial: "", // TODO: confirm Justdial listing link
   },
-  mapsUrl: "https://maps.app.goo.gl/jJ7fQaMons64zAXF6",
+  mapsUrl: "https://maps.app.goo.gl/PQUYQ3uHAxxernwo9",
 };
 
 export const hero = {
@@ -30,16 +30,61 @@ export const gallery = [
   {
     id: "reception",
     title: "Reception & Lobby",
+    category: "Interiors",
     image: "/assets/gallery/reception-counter.jpg", // sourced from client-provided photo
     alt: "Marble reception counter with backlit Serenity logo",
   },
   {
     id: "waiting-area",
     title: "Waiting Lounge",
+    category: "Interiors",
     image: "/assets/gallery/waiting-lounge.jpg", // sourced from client-provided photo
     alt: "Teal velvet seating in the salon waiting area",
   },
-  // TODO: add more interior/exterior/treatment photos once client shares them
+  {
+    id: "treatment-room",
+    title: "Massage Treatment Room",
+    category: "Interiors",
+    image: "/assets/gallery/treatment-room.jpg",
+    alt: "Private, dimly lit massage treatment room",
+  },
+  {
+    id: "jacuzzi-suite",
+    title: "Jacuzzi Suite",
+    category: "Interiors",
+    image: "/assets/gallery/jacuzzi-suite.jpg",
+    alt: "Warm-lit jacuzzi suite",
+  },
+  {
+    id: "aroma-therapy",
+    title: "Aroma Therapy in Session",
+    category: "Therapies",
+    image: "/assets/gallery/aroma-therapy.jpg",
+    alt: "Aroma oils and towels set up for a therapy session",
+  },
+  {
+    id: "body-polishing",
+    title: "Body Polishing Ritual",
+    category: "Therapies",
+    image: "/assets/gallery/body-polishing.jpg",
+    alt: "Body polishing scrub ritual setup",
+  },
+  {
+    id: "thai-massage",
+    title: "Traditional Thai Massage",
+    category: "Therapies",
+    image: "/assets/gallery/thai-massage.jpg",
+    alt: "Traditional Thai massage in progress",
+  },
+  {
+    id: "storefront",
+    title: "Storefront, Old Bus Stand",
+    category: "Exteriors",
+    image: "/assets/gallery/storefront.jpg",
+    alt: "Serenity Salon and Wellness Spa storefront in Bilaspur",
+  },
+  // TODO: swap these elegant placeholder cards for real client photos —
+  // drop files into public/assets/gallery/ using the image paths above.
 ];
 
 // Services grouped by category, with duration-based pricing (in INR)
@@ -144,6 +189,46 @@ export const services = [
   },
 ];
 
+// Content for the dedicated About Us page
+export const about = {
+  eyebrow: "Our Story",
+  heading: "A Quiet Corner of Bilaspur, Built for Calm",
+  intro:
+    "Serenity Salon and Wellness Spa was founded on a simple idea: that everyone deserves a space to slow down. Tucked near the Old Bus Stand, our lounge blends traditional therapies with a calm, contemporary setting so you can step away from the noise of daily life, even if only for an hour.",
+  story: [
+    "We started Serenity because Bilaspur didn't have a wellness space that felt both premium and personal. Every therapy on our menu — from Traditional Thai to our Signature Spasha massage — is chosen because it works, not because it's trendy.",
+    "Our therapists are trained in classical and contemporary techniques, and every room is kept quiet, warm, and unhurried, so your session is never rushed.",
+  ],
+  mission:
+    "To make thoughtful, therapeutic self-care accessible in Bilaspur — one calm, unhurried session at a time.",
+  values: [
+    {
+      title: "Trained Hands",
+      description:
+        "Every therapist is trained in classical and contemporary technique, so pressure, pacing and posture are always right.",
+      icon: "badge",
+    },
+    {
+      title: "Hygiene First",
+      description:
+        "Linens, tools and treatment rooms are reset and sanitised between every single guest.",
+      icon: "sparkle",
+    },
+    {
+      title: "Premium Ingredients",
+      description:
+        "We use researched aroma oils and body-care products chosen for therapeutic effect, not just fragrance.",
+      icon: "droplet",
+    },
+    {
+      title: "Unhurried Pace",
+      description:
+        "Rooms are quiet and sessions are never rushed — your hour is fully yours.",
+      icon: "leaf",
+    },
+  ],
+};
+
 export const contactCta = {
   heading: "Book Your Appointment",
   description: "Call or WhatsApp us to reserve your slot at Serenity Salon and Wellness Spa, Bilaspur.",
@@ -158,7 +243,7 @@ export const trustStrip = [
   { label: "Certified Therapists", icon: "badge" },
   { label: "Commitment to Hygiene", icon: "sparkle" },
   { label: "Premium Aroma Oils", icon: "droplet" },
-  { label: "Quiet, Elegant Setting", icon: "leaf" },
+  { label: "Quality Products", icon: "leaf" },
   { label: "Researched Therapies", icon: "book" },
 ];
 

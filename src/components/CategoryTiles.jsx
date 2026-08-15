@@ -1,19 +1,26 @@
+import { Link } from "react-router-dom";
 import { Sparkles, Droplets, Waves, Users } from "lucide-react";
 import { services } from "../data/siteData";
 import "./CategoryTiles.css";
 
+import massageImage from "../assets/massage.png";
+import bodyCareImage from "../assets/bodyCare.png";
+import jacuzziImage from "../assets/jacuzzi.png";
+import coupleGroupImage from "../assets/coupleGroup.png";
+
 const CATEGORY_ICON = {
   "Massage Therapies": Sparkles,
   "Body Care": Droplets,
-  Jacuzzi: Waves,
+  "Jacuzzi": Waves,
+  "Couple & Group Visits": Users,
 };
 
-// Gradient tone per tile so each photo-style panel reads distinctly
-const TILE_TONE = [
-  "linear-gradient(160deg, #6b4429, #2a1a12)",
-  "linear-gradient(160deg, #8a5a34, #3a2417)",
-  "linear-gradient(160deg, #4d301f, #1f130d)",
-];
+const CATEGORY_IMAGES = {
+  "Massage Therapies": massageImage,
+  "Body Care": bodyCareImage,
+  "Jacuzzi": jacuzziImage,
+  "Couple & Group Visits": coupleGroupImage,
+};
 
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -22,36 +29,77 @@ function slugify(text) {
 export default function CategoryTiles() {
   return (
     <section className="tiles">
+
       <div className="tiles-heading">
         <h2>Holistic Wellness Services</h2>
       </div>
 
       <div className="tiles-grid">
-        {services.map((group, i) => {
-          const Icon = CATEGORY_ICON[group.category] ?? Sparkles;
+
+        {services.map((group) => {
+          const Icon = CATEGORY_ICON[group.category] ;
+
           return (
-            <a
-              href={`#${slugify(group.category)}`}
+            <Link
+              to={`/services#${slugify(group.category)}`}
               className="tile"
               key={group.category}
-              style={{ background: TILE_TONE[i % TILE_TONE.length] }}
+              style={{
+                backgroundImage: `url(${CATEGORY_IMAGES[group.category]})`,
+              }}
             >
               <div className="tile-veil" />
-              <Icon className="tile-icon" size={30} strokeWidth={1.2} />
-              <h3>{group.category}</h3>
-              <span className="tile-count">{group.items.length} therapies</span>
-              <span className="btn btn-outline-light tile-btn">Know More</span>
-            </a>
+
+              <div className="tile-content">
+                <Icon
+                  className="tile-icon"
+                  size={30}
+                  strokeWidth={1.2}
+                />
+
+                <h3>{group.category}</h3>
+
+                <span className="tile-count">
+                  {group.items.length} therapies
+                </span>
+
+                <span className="btn btn-outline-light tile-btn">
+                  Know More
+                </span>
+              </div>
+            </Link>
           );
         })}
 
-        <a href="#contact" className="tile tile-cta">
+        {/* COUPLE & GROUP */}
+        <Link
+          to="/contact"
+          className="tile tile-cta"
+          style={{
+            backgroundImage: `url(${coupleGroupImage})`,
+          }}
+        >
           <div className="tile-veil" />
-          <Users className="tile-icon" size={30} strokeWidth={1.2} />
-          <h3>Couple &amp; Group Visits</h3>
-          <span className="tile-count">Book together</span>
-          <span className="btn btn-outline-light tile-btn">Know More</span>
-        </a>
+
+          <div className="tile-content">
+            <Users
+              className="tile-icon"
+              size={30}
+              strokeWidth={1.2}
+            />
+
+            <h3>Couple &amp; Group Visits</h3>
+
+            <span className="tile-count">
+              Book together
+            </span>
+
+            <span className="btn btn-outline-light tile-btn">
+              Know More
+            </span>
+          </div>
+        </Link>
+
       </div>
     </section>
   );

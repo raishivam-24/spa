@@ -1,62 +1,256 @@
+/* =========================================
+   TRUST SECTION
+========================================= */
+
 .trust {
   background: var(--cream);
-}
-
-.trust-heading {
-  text-align: center;
-  padding: 44px 20px 0;
-  font-size: clamp(24px, 3vw, 32px);
-  color: var(--brown-800);
-}
-
-.trust-inner {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin-top: 32px;
-}
-
-.trust-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 12px;
-  padding: 34px 12px;
-  color: var(--text-light);
   overflow: hidden;
 }
 
+
+/* =========================================
+   HEADING
+========================================= */
+
+.trust-heading {
+  text-align: center;
+
+  padding: 44px 20px 42px;
+
+  margin: 0;
+
+  font-size: clamp(24px, 3vw, 32px);
+
+  line-height: 1.2;
+
+  color: var(--brown-800);
+}
+
+
+/* =========================================
+   TRUST GRID
+========================================= */
+
+.trust-inner {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  width: 100%;
+}
+
+
+/* =========================================
+   TRUST ITEM
+========================================= */
+
+.trust-item {
+  position: relative;
+
+  min-height: 250px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 32px 18px 38px;
+
+  color: var(--text-light);
+
+  overflow: hidden;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  border-right:
+    1px solid
+    rgba(246, 236, 218, 0.08);
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
 .trust-item-veil {
   position: absolute;
+
   inset: 0;
-  background: linear-gradient(160deg, rgba(31, 19, 13, 0.15), rgba(31, 19, 13, 0.55));
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31, 19, 13, 0.20) 0%,
+      rgba(31, 19, 13, 0.48) 45%,
+      rgba(25, 15, 10, 0.90) 100%
+    );
+
+  transition:
+    background 0.4s ease;
 }
 
-.trust-item svg,
-.trust-item span {
+
+/* =========================================
+   HOVER OVERLAY
+========================================= */
+
+.trust-item:hover .trust-item-veil {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31, 19, 13, 0.12) 0%,
+      rgba(31, 19, 13, 0.40) 45%,
+      rgba(25, 15, 10, 0.82) 100%
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.trust-item-content {
   position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 100%;
 }
 
-.trust-item svg {
+
+/* =========================================
+   ICON
+========================================= */
+
+.trust-item-icon {
   color: var(--gold-300);
+
+  filter:
+    drop-shadow(
+      0 0 7px
+      rgba(207, 159, 86, 0.35)
+    );
+
+  transition:
+    transform 0.35s ease;
 }
+
+
+.trust-item:hover .trust-item-icon {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
 
 .trust-item span {
+  max-width: 180px;
+
   font-size: 12.5px;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.03em;
+
+  color: var(--text-light);
 }
 
-@media (max-width: 900px) {
+
+/* =========================================
+   HOVER
+========================================= */
+
+.trust-item:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
   .trust-inner {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .trust-item {
+    min-height: 220px;
+  }
 }
 
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 560px) {
+
+  .trust-heading {
+    padding: 36px 20px 30px;
+
+    font-size: 25px;
+  }
+
   .trust-inner {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-item {
+    min-height: 200px;
+
+    padding: 28px 12px 30px;
+  }
+
+  .trust-item-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .trust-item span {
+    font-size: 11px;
+
+    max-width: 145px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .trust-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-item {
+    min-height: 180px;
   }
 }

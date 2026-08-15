@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 import { business, services } from "../data/siteData";
 import "./Footer.css";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,9 +11,19 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-hero">
-        <span className="footer-hero-mark">S</span>
-        <p className="footer-hero-title">Serenity</p>
-        <p className="footer-hero-sub">Salon &amp; Wellness Spa</p>
+        <img
+          src={logo}
+          alt="Serenity Salon & Wellness Spa"
+          className="footer-hero-logo"
+        />
+
+        <p className="footer-hero-title">
+          Serenity
+        </p>
+
+        <p className="footer-hero-sub">
+          Salon &amp; Wellness Spa
+        </p>
       </div>
 
       <div className="container footer-top">
@@ -30,11 +42,11 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Explore</h4>
           <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">Wellbeing</a></li>
-            <li><a href="#gallery">Visit Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -43,9 +55,9 @@ export default function Footer() {
           <ul>
             {services.map((group) => (
               <li key={group.category}>
-                <a href={`#${group.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                <Link to={`/services#${group.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
                   {group.category}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
