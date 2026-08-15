@@ -147,5 +147,68 @@
 @media (max-width: 560px) {
   .footer-top {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 44px;
+    padding: 48px 0 40px;
+  }
+  .footer-hero {
+    padding: 44px 20px 32px;
+  }
+  .footer-hero-title {
+    font-size: 28px;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+  .footer-brand-desc {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-col {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-col h4 {
+    position: relative;
+    padding-bottom: 12px;
+  }
+  .footer-col h4::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 1px;
+    background: rgba(207, 159, 86, 0.4);
+  }
+  .footer-col ul {
+    align-items: center;
+  }
+
+  .footer-contact li {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.55;
+  }
+  .footer-contact span,
+  .footer-contact a {
+    text-align: center;
+  }
+
+  .footer-bottom-inner {
+    justify-content: center;
+    text-align: center;
   }
 }

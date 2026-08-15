@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <TopBar />
-      <Navbar />
       <main>
+        <Navbar />
         <Hero />
         <AboutSplit />
         <TrustStrip />
