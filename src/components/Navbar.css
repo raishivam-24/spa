@@ -1,0 +1,158 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, var(--brown-800), var(--brown-700));
+  border-bottom: 1px solid rgba(207, 159, 86, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 32px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.navbar-logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--gold-300);
+  flex-shrink: 0;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.navbar-logo-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+
+.navbar-logo-sub {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-light-dim);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--text-light-dim);
+}
+
+.navbar-links a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--text-light);
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold-400);
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+}
+
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-cta-secondary {
+  padding: 13px 20px;
+  font-size: 12.5px;
+}
+
+.navbar-cta .btn {
+  white-space: nowrap;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none;
+  }
+  .navbar-burger {
+    display: inline-flex;
+  }
+  .navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 32px 22px;
+    background: var(--brown-800);
+    border-top: 1px solid rgba(207, 159, 86, 0.15);
+  }
+  .navbar-mobile a {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(246, 236, 218, 0.08);
+    color: var(--text-light-dim);
+    font-size: 14px;
+  }
+  .navbar-mobile-cta {
+    margin-top: 14px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-inner {
+    padding: 14px 20px;
+  }
+  .navbar-logo-title {
+    font-size: 19px;
+  }
+}

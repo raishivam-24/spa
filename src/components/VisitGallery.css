@@ -1,0 +1,103 @@
+.visit {
+  background: var(--brown-900);
+  padding: 96px 0 100px;
+}
+
+.visit-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.visit-heading .eyebrow {
+  justify-content: center;
+}
+
+.visit-title {
+  font-size: clamp(28px, 3.6vw, 40px);
+  color: var(--text-light);
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.visit-card {
+  aspect-ratio: 4 / 3.2;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, var(--beige-100), var(--beige-200));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 24px;
+  color: var(--brown-700);
+  border: 1px solid rgba(207, 159, 86, 0.3);
+}
+
+.visit-card-art {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(58, 36, 23, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown-600);
+}
+
+.visit-card-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--brown-800);
+}
+
+.visit-card-map {
+  background: linear-gradient(150deg, var(--brown-700), var(--brown-950));
+  color: var(--text-light-dim);
+  gap: 8px;
+}
+
+.visit-card-map .visit-card-art {
+  background: rgba(207, 159, 86, 0.14);
+  color: var(--gold-300);
+}
+
+.visit-card-map .visit-card-title {
+  color: var(--text-light);
+}
+
+.visit-card-address {
+  font-size: 12.5px;
+  line-height: 1.55;
+  max-width: 240px;
+}
+
+.visit-card-link {
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--gold-300);
+}
+
+@media (max-width: 900px) {
+  .visit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+  .visit {
+    padding: 72px 0 76px;
+  }
+}

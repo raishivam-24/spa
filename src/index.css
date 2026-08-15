@@ -1,0 +1,183 @@
+/* ============================================================
+   Serenity Salon and Wellness Spa — design tokens
+   Palette: warm coffee-brown grounds, beige/cream panels,
+   soft gold accent, light cream type on every brown surface.
+   ============================================================ */
+:root {
+  /* browns */
+  --brown-950: #1f130d;
+  --brown-900: #2a1a12;
+  --brown-800: #3a2417;
+  --brown-700: #4d301f;
+  --brown-600: #6b4429;
+  --brown-500: #8a5a34;
+
+  /* beige / cream */
+  --beige-200: #e6d3b3;
+  --beige-100: #efe1c8;
+  --beige-50: #f8f0e1;
+  --cream: #fbf6ec;
+
+  /* gold accent */
+  --gold-400: #cf9f56;
+  --gold-300: #e0b876;
+
+  /* text */
+  --text-light: #f6ecda;
+  --text-light-dim: #d8c3a4;
+  --text-brown-deep: #2a1a12;
+
+  /* type */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* misc */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 20px 50px -25px rgba(31, 19, 13, 0.55);
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--brown-900);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  font-weight: 600;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--gold-400);
+  opacity: 0.7;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-400));
+  color: var(--brown-950);
+}
+
+.btn-outline-light {
+  border-color: rgba(246, 236, 218, 0.5);
+  color: var(--text-light);
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  background: rgba(246, 236, 218, 0.1);
+  border-color: var(--text-light);
+}
+
+.btn-dark {
+  background: var(--brown-800);
+  color: var(--text-light);
+}
+
+.btn-dark:hover {
+  background: var(--brown-700);
+}
+
+.btn-outline-dark {
+  border-color: rgba(58, 36, 23, 0.35);
+  color: var(--brown-700);
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(58, 36, 23, 0.06);
+  border-color: var(--brown-700);
+}
+
+section {
+  position: relative;
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 20px;
+  }
+}
