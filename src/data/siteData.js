@@ -13,8 +13,8 @@ export const business = {
   email: "serenitywellnessspa10@gmail.com",
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61588152586812",
-    instagram: "", // TODO: confirm client's Instagram handle/link
-    justdial: "", // TODO: confirm Justdial listing link
+    instagram: "https://www.instagram.com/serenitywellnes_spa_bilaspur/", // TODO: confirm client's Instagram handle/link
+    justdial: "https://www.justdial.com/Bilaspur-Chhattisgarh/Serenity-Salon-and-Wellness-Spa-Near-Surya-Hotel-Bus-Stand-Road/9999P7752-7752-260226192208-J1S3_BZDET/service-catalog", // TODO: confirm Justdial listing link
   },
   mapsUrl: "https://maps.app.goo.gl/PQUYQ3uHAxxernwo9",
 };
@@ -101,6 +101,7 @@ export const services = [
           { duration: "90 Minutes", price: 3700 },
           { duration: "120 Minutes", price: 4800 },
         ],
+        image: "/assets/services/traditional-thai-massage.png", // optional individual service image
       },
       {
         name: "Aroma Therapy (Relaxation)",
@@ -111,6 +112,7 @@ export const services = [
           { duration: "90 Minutes", price: 3900 },
           { duration: "120 Minutes", price: 5000 },
         ],
+        image: "/assets/services/aroma-therapy.png", // optional individual service image
       },
       {
         name: "Swedish Massage",
@@ -121,6 +123,7 @@ export const services = [
           { duration: "90 Minutes", price: 3900 },
           { duration: "120 Minutes", price: 5000 },
         ],
+        image: "/assets/services/swedish-massage.png", // optional individual service image
       },
       {
         name: "Balinese Massage",
@@ -131,6 +134,7 @@ export const services = [
           { duration: "90 Minutes", price: 4000 },
           { duration: "120 Minutes", price: 5200 },
         ],
+        image: "/assets/services/balinese-massage.png", // optional individual service image
       },
       {
         name: "Deep Tissue (Muscle Pain Relief)",
@@ -141,6 +145,7 @@ export const services = [
           { duration: "90 Minutes", price: 4100 },
           { duration: "120 Minutes", price: 5200 },
         ],
+        image: "/assets/services/deep-tissue-massage.png", // optional individual service image
       },
       {
         name: "Spasha Signature Body Massage",
@@ -151,6 +156,7 @@ export const services = [
           { duration: "90 Minutes", price: 4200 },
           { duration: "120 Minutes", price: 5600 },
         ],
+        image: "/assets/services/spasha-signature-massage.png", // optional individual service image
       },
     ],
   },
@@ -161,16 +167,19 @@ export const services = [
         name: "Body Polishing",
         description: "Removes body tan and dead skin.",
         pricing: [{ duration: "60 Minutes", price: 3000 }],
+        image: "/assets/services/body-polishing.png", // optional individual service image
       },
       {
         name: "Body Polishing with Massage",
         description: "30-minute body scrub followed by a 90-minute aroma body massage.",
         pricing: [{ duration: "90 Minutes", price: 4500 }],
+        image: "/assets/services/body-polishing-massage.png", // optional individual service image
       },
       {
         name: "Luxury Body Care",
         description: "Includes body scrub, massage, body pack, and moisturizer.",
         pricing: [{ duration: "120 Minutes", price: 7000 }],
+        image: "/assets/services/luxury-body-care.png", // optional individual service image
       },
     ],
   },
@@ -184,6 +193,7 @@ export const services = [
           { duration: "Session", price: 8000 },
           { duration: "Session (extended)", price: 14000 },
         ],
+        image: "/assets/services/jacuzzi.png", // optional individual service image
       },
     ],
   },

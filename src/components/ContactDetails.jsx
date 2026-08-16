@@ -1,8 +1,13 @@
-import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Clock, Navigation } from "lucide-react";
 import { business, contactCta } from "../data/siteData";
 import "./ContactDetails.css";
 
-const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(business.address)}&output=embed`;
+// Exact business listing for Serenity Salon and wellness spa (CID extracted from the
+// Google Maps link you shared — this pins the precise business, not just a lat/lng guess)
+const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/MWjUprUBxdoukJEJA";
+const CID = "6235356565141257614";
+
+const mapEmbedSrc = `https://www.google.com/maps?cid=${CID}&output=embed`;
 
 export default function ContactDetails() {
   return (
@@ -37,6 +42,10 @@ export default function ContactDetails() {
           <a className="btn btn-outline-card" href={`tel:+91${business.phone}`}>
             <Phone size={16} />
             Call Now
+          </a>
+          <a className="btn btn-outline-card" href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer">
+            <Navigation size={16} />
+            Get Directions
           </a>
         </div>
       </div>

@@ -1,153 +1,587 @@
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
 .services {
+  position: relative;
+
   background:
-    radial-gradient(ellipse 700px 400px at 90% 0%, rgba(207, 159, 86, 0.1), transparent 60%),
+    radial-gradient(
+      ellipse 700px 400px at 90% 0%,
+      rgba(207, 159, 86, 0.10),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 500px 300px at 0% 70%,
+      rgba(107, 68, 41, 0.16),
+      transparent 60%
+    ),
     var(--brown-900);
+
   padding: 96px 0 100px;
+
+  overflow: hidden;
 }
+
+
+/* =========================================
+   SERVICES HEADING
+========================================= */
 
 .services-heading {
   text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 16px;
+
   max-width: 620px;
+
   margin: 0 auto 60px;
 }
+
 
 .services-heading .eyebrow {
   justify-content: center;
 }
 
+
 .services-title {
+  margin: 0;
+
   font-size: clamp(30px, 4vw, 44px);
+
+  line-height: 1.1;
+
   color: var(--text-light);
 }
 
+
 .services-sub {
+  margin: 0;
+
   font-size: 15px;
+
   line-height: 1.7;
+
   color: var(--text-light-dim);
+
+  max-width: 590px;
 }
+
+
+/* =========================================
+   SERVICE GROUP
+========================================= */
 
 .services-group {
   scroll-margin-top: 96px;
 }
 
+
 .services-group-title {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
-  font-size: 24px;
-  color: var(--text-light);
-  margin-bottom: 26px;
+
+  margin: 0 0 26px;
+
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(207, 159, 86, 0.2);
+
+  border-bottom:
+    1px solid
+    rgba(207, 159, 86, 0.20);
+
+  font-size: 24px;
+
+  line-height: 1.25;
+
+  color: var(--text-light);
 }
 
+
 .services-group-title svg {
+  flex-shrink: 0;
+
   color: var(--gold-400);
 }
+
 
 .services-group + .services-group {
   margin-top: 20px;
 }
 
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
   gap: 26px;
+
   margin-bottom: 64px;
 }
 
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
 .service-card {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  background: var(--cream);
+  position: relative;
+
   display: flex;
+
   flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--cream);
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+.service-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 50px
+    rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================
+   SERVICE IMAGE CONTAINER
+========================================= */
 
 .service-card-photo {
   position: relative;
-  height: 170px;
+
+  width: 100%;
+
+  height: 220px;
+
+  overflow: hidden;
+
+  background: var(--brown-700);
+
   display: flex;
+
   align-items: flex-end;
-  padding: 14px 16px;
+
+  padding: 15px 16px;
 }
+
+
+/* =========================================
+   SERVICE IMAGE
+========================================= */
+
+.service-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s
+    cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+.service-card:hover .service-card-image {
+  transform: scale(1.07);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.service-card-photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31, 19, 13, 0.04) 0%,
+      rgba(31, 19, 13, 0.14) 35%,
+      rgba(31, 19, 13, 0.40) 65%,
+      rgba(31, 19, 13, 0.82) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   IMAGE PRICE BADGE
+========================================= */
 
 .service-card-photo-tag {
-  background: rgba(31, 19, 13, 0.55);
-  border: 1px solid rgba(246, 236, 218, 0.35);
-  color: var(--text-light);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 6px 12px;
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 7px 13px;
+
   border-radius: 999px;
-  backdrop-filter: blur(3px);
+
+  border:
+    1px solid
+    rgba(246, 236, 218, 0.38);
+
+  background:
+    rgba(31, 19, 13, 0.60);
+
+  color: var(--text-light);
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  line-height: 1;
+
+  backdrop-filter: blur(5px);
+
+  -webkit-backdrop-filter: blur(5px);
 }
+
+
+/* =========================================
+   SERVICE BODY
+========================================= */
 
 .service-card-body {
-  padding: 22px 22px 24px;
   display: flex;
+
   flex-direction: column;
-  gap: 12px;
+
   flex-grow: 1;
+
+  gap: 12px;
+
+  padding: 23px 22px 24px;
 }
 
+
+/* =========================================
+   SERVICE NAME
+========================================= */
+
 .service-card-name {
+  margin: 0;
+
+  font-family: var(--font-display);
+
   font-size: 20px;
+
+  line-height: 1.25;
+
   color: var(--brown-800);
 }
 
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
 .service-card-desc {
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--brown-600);
   flex-grow: 1;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: var(--brown-600);
 }
+
+
+/* =========================================
+   PRICING
+========================================= */
 
 .service-card-pricing {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 8px;
+
+  margin-top: 2px;
 }
+
 
 .service-price-chip {
   display: inline-flex;
+
   align-items: center;
+
+  justify-content: center;
+
   gap: 5px;
-  background: rgba(58, 36, 23, 0.07);
-  border: 1px solid rgba(58, 36, 23, 0.12);
+
+  padding: 6px 11px;
+
+  border:
+    1px solid
+    rgba(58, 36, 23, 0.12);
+
   border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 11.5px;
+
+  background:
+    rgba(58, 36, 23, 0.07);
+
   color: var(--brown-700);
+
+  font-size: 11.5px;
+
   font-weight: 500;
+
+  line-height: 1.2;
 }
 
+
 .service-price-chip svg {
+  flex-shrink: 0;
+
   color: var(--brown-500);
 }
 
+
+/* =========================================
+   BOOK NOW BUTTON
+========================================= */
+
 .service-card-cta {
-  margin-top: 4px;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
   width: 100%;
+
+  margin-top: 4px;
 }
 
-@media (max-width: 980px) {
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+
+  .service-card-photo {
+    height: 230px;
   }
 }
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 760px) {
+
+  .services {
+    padding: 78px 0 84px;
+  }
+
+  .services-heading {
+    margin-bottom: 48px;
+  }
+
+  .services-title {
+    font-size: 34px;
+  }
+
+  .services-group-title {
+    font-size: 22px;
+  }
+
+  .services-grid {
+    gap: 20px;
+
+    margin-bottom: 52px;
+  }
+
+  .service-card-photo {
+    height: 220px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 640px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+
   .services {
     padding: 72px 0 76px;
+  }
+
+  .services-heading {
+    gap: 13px;
+
+    margin-bottom: 42px;
+
+    padding: 0 8px;
+  }
+
+  .services-title {
+    font-size: 30px;
+  }
+
+  .services-sub {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .services-group {
+    scroll-margin-top: 80px;
+  }
+
+  .services-group-title {
+    gap: 8px;
+
+    font-size: 21px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-bottom: 50px;
+  }
+
+  .service-card {
+    border-radius: 18px;
+  }
+
+  .service-card-photo {
+    height: 230px;
+
+    padding: 14px;
+  }
+
+  .service-card-body {
+    padding: 21px 20px 23px;
+
+    gap: 11px;
+  }
+
+  .service-card-name {
+    font-size: 19px;
+  }
+
+  .service-card-desc {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+  .service-card-pricing {
+    gap: 7px;
+  }
+
+  .service-price-chip {
+    font-size: 11px;
+
+    padding: 6px 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .services {
+    padding: 64px 0 70px;
+  }
+
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-group-title {
+    font-size: 19px;
+  }
+
+  .service-card-photo {
+    height: 210px;
+  }
+
+  .service-card-body {
+    padding: 19px 17px 21px;
+  }
+
+  .service-card-name {
+    font-size: 18px;
+  }
+
+  .service-card-photo-tag {
+    font-size: 10.5px;
+
+    padding: 6px 11px;
   }
 }

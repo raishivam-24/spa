@@ -1,0 +1,14 @@
+.menu-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.menu-actions-center {
+  justify-content: center;
+}
+
+.menu-actions-btn {
+  white-space: nowrap;
+}

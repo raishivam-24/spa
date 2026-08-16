@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { FacebookIcon, InstagramIcon } from "./SocialIcons";
+import { FacebookIcon, InstagramIcon, } from "./SocialIcons";
 import { business, services } from "../data/siteData";
 import "./Footer.css";
 import logo from "../assets/logo.png";
@@ -8,6 +8,9 @@ import logo from "../assets/logo.png";
 export default function Footer() {
   const year = new Date().getFullYear();
 
+  const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  business.address + ", Bilaspur, Chhattisgarh"
+)}`;
   return (
     <footer className="footer">
       <div className="footer-hero">
@@ -33,7 +36,7 @@ export default function Footer() {
             <a href={business.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
               <FacebookIcon size={16} />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href={business.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
               <InstagramIcon size={16} />
             </a>
           </div>
@@ -68,7 +71,15 @@ export default function Footer() {
           <ul className="footer-contact">
             <li>
               <MapPin size={15} />
-              <span>{business.address}</span>
+
+              <a
+                href="https://maps.app.goo.gl/vsnRP8Y7hiQQYv5b9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-address-link"
+              >
+                {business.address}
+              </a>
             </li>
             <li>
               <Phone size={15} />

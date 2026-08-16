@@ -234,3 +234,14 @@
     text-align: center;
   }
 }
+.footer-address-link {
+  color: var(--text-light-dim);
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-address-link:hover {
+  color: var(--gold-300);
+}

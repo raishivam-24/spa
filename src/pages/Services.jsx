@@ -3,6 +3,8 @@ import PageHeader from "../components/PageHeader";
 import Services from "../components/Services";
 import ContactCta from "../components/ContactCta";
 import TrustStrip from "../components/TrustStrip";
+import MenuActions from "../components/MenuActions";
+import "./Services.css";
 
 export default function ServicesPage() {
   return (
@@ -15,6 +17,9 @@ export default function ServicesPage() {
       />
       <TrustStrip />
       <Services />
+      {/* <div className="container services-page-actions">
+        <MenuActions align="center" />
+      </div> */}
       <ContactCta />
     </Layout>
   );

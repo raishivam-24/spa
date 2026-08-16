@@ -56,6 +56,22 @@
   color: var(--gold-300);
 }
 
+.topbar-location {
+  color: var(--text-light-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: poin
+  ter;
+}
+
+.topbar-location:hover {
+  color: var(--gold-300);
+}
+
+.topbar-location svg {
+  color: var(--gold-400);
+  flex-shrink: 0;
+}
 @media (max-width: 720px) {
   .topbar-left {
     display: none;
