@@ -19,6 +19,7 @@ export const business = {
   mapsUrl: "https://maps.app.goo.gl/PQUYQ3uHAxxernwo9",
 };
 
+
 export const hero = {
   heading: "Serenity Salon and Wellness Spa",
   subheading: business.tagline,
@@ -26,65 +27,92 @@ export const hero = {
     "Step into a luxury salon and wellness retreat in the heart of Bilaspur, offering premium hair, skin, and spa therapies in a calm, elegant setting.",
 };
 
+// Real photos supplied by the client — stored in public/assets/gallery/
 export const gallery = [
-  {
-    id: "reception",
-    title: "Reception & Lobby",
-    category: "Interiors",
-    image: "/assets/gallery/reception-counter.jpg", // sourced from client-provided photo
-    alt: "Marble reception counter with backlit Serenity logo",
-  },
-  {
-    id: "waiting-area",
-    title: "Waiting Lounge",
-    category: "Interiors",
-    image: "/assets/gallery/waiting-lounge.jpg", // sourced from client-provided photo
-    alt: "Teal velvet seating in the salon waiting area",
-  },
-  {
-    id: "treatment-room",
-    title: "Massage Treatment Room",
-    category: "Interiors",
-    image: "/assets/gallery/treatment-room.jpg",
-    alt: "Private, dimly lit massage treatment room",
-  },
-  {
-    id: "jacuzzi-suite",
-    title: "Jacuzzi Suite",
-    category: "Interiors",
-    image: "/assets/gallery/jacuzzi-suite.jpg",
-    alt: "Warm-lit jacuzzi suite",
-  },
-  {
-    id: "aroma-therapy",
-    title: "Aroma Therapy in Session",
-    category: "Therapies",
-    image: "/assets/gallery/aroma-therapy.jpg",
-    alt: "Aroma oils and towels set up for a therapy session",
-  },
-  {
-    id: "body-polishing",
-    title: "Body Polishing Ritual",
-    category: "Therapies",
-    image: "/assets/gallery/body-polishing.jpg",
-    alt: "Body polishing scrub ritual setup",
-  },
-  {
-    id: "thai-massage",
-    title: "Traditional Thai Massage",
-    category: "Therapies",
-    image: "/assets/gallery/thai-massage.jpg",
-    alt: "Traditional Thai massage in progress",
-  },
   {
     id: "storefront",
     title: "Storefront, Old Bus Stand",
     category: "Exteriors",
-    image: "/assets/gallery/storefront.jpg",
-    alt: "Serenity Salon and Wellness Spa storefront in Bilaspur",
+    image: "/gallery/storefront.jpg",
+    alt: "Serenity Luxury Salon and Wellness Spa storefront, shutter and signage lit up at night",
   },
-  // TODO: swap these elegant placeholder cards for real client photos —
-  // drop files into public/assets/gallery/ using the image paths above.
+  {
+    id: "signage",
+    title: "Serenity Signage",
+    category: "Exteriors",
+    image: "/gallery/signage.jpg",
+    alt: "Serenity Luxury Salon and Wellness Spa logo signboard",
+  },
+  {
+    id: "reception-desk",
+    title: "Reception Desk",
+    category: "Interiors",
+    image: "/gallery/reception-desk.jpg",
+    alt: "Marble-topped wooden reception counter at the entrance",
+  },
+  {
+    id: "reception-area",
+    title: "Reception & Lobby",
+    category: "Interiors",
+    image: "/gallery/reception-area.jpg",
+    alt: "Marble-topped wooden reception counter at the entrance",
+  },
+  {
+    id: "seating-area",
+    title: "Seating Area",
+    category: "Interiors",
+    image: "/gallery/seating-area.jpg",
+    alt: "Comfortable seating area",
+  },
+  {
+    id: "awards-wall",
+    title: "Awards & Recognitions",
+    category: "Interiors",
+    image: "/gallery/awards-wall.jpg",
+    alt: "Display shelving with client awards and recognitions along the corridor",
+  },
+  {
+    id: "corridor",
+    title: "Spa Corridor",
+    category: "Interiors",
+    image: "/gallery/corridor.jpg",
+    alt: "Marble-floored corridor with botanical wallpaper under blue ambient lighting",
+  },
+  {
+    id: "treatment-room-1",
+    title: "Massage Treatment Room 1",
+    category: "Therapies",
+    image: "/gallery/treatment-room-1.jpg",
+    alt: "Private massage treatment room with patterned wallpaper and a therapy bed",
+  },
+  {
+    id: "treatment-room-2",
+    title: "Massage Treatment Room 2",
+    category: "Therapies",
+    image: "/gallery/treatment-room-2.jpg",
+    alt: "Private massage treatment room with patterned wallpaper and a therapy bed",
+  },
+  {
+    id: "treatment-room-mood",
+    title: "Treatment Room, Ambient Lighting",
+    category: "Therapies",
+    image: "/gallery/treatment-room-mood.jpg",
+    alt: "Treatment room under calming blue mood lighting, ready for a session",
+  },
+  {
+    id: "relaxation-room-1",
+    title: "Relaxation Suite",
+    category: "Interiors",
+    image: "/gallery/relaxation-room-1.jpg",
+    alt: "Quiet relaxation suite with mauve walls and a therapy bed",
+  },
+  {
+    id: "relaxation-room-2",
+    title: "Relaxation Suite",
+    category: "Interiors",
+    image: "/gallery/relaxation-room-2.jpg",
+    alt: "Quiet relaxation suite with mauve walls and a therapy bed",
+  },
 ];
 
 // Services grouped by category, with duration-based pricing (in INR)
