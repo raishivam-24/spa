@@ -1,13 +1,15 @@
 import { FileText, Download, BookOpenText } from "lucide-react";
 import "./MenuActions.css";
 
-const MENU_PDF_PATH = "/assets/serenity-menu.pdf";
+const MENU_PDF_PATH = "/serenity-menu.pdf";
 
 export default function MenuActions({ align = "left", surface = "dark" }) {
   const outlineClass = surface === "light" ? "btn-outline-card" : "btn-outline-light";
 
   return (
     <div className={`menu-callout menu-callout-${surface} menu-callout-${align}`}>
+      <div className="menu-callout-accent" aria-hidden="true" />
+
       <div className="menu-callout-icon">
         <BookOpenText size={22} strokeWidth={1.4} />
       </div>
@@ -19,6 +21,8 @@ export default function MenuActions({ align = "left", surface = "dark" }) {
           print or share.
         </p>
       </div>
+
+      <div className="menu-callout-divider" aria-hidden="true" />
 
       <div className="menu-callout-actions">
         

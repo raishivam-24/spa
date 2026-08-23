@@ -17,9 +17,11 @@ export default function ServicesPage() {
       />
       <TrustStrip />
       <Services />
-      {/* <div className="container services-page-actions">
-        <MenuActions align="center" />
-      </div> */}
+      <section className="services-page-actions">
+        <div className="container">
+          <MenuActions align="center" />
+        </div>
+      </section>
       <ContactCta />
     </Layout>
   );

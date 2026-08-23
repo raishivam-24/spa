@@ -6,7 +6,7 @@ import "./Services.css";
 import "./ServicesPreview.css";
 
 import traditionalThaiMassage from "../assets/services/traditional-thai-massage.png";
-import bodyCare from "../assets/services/body-care.png";
+import bodyCare from "../assets/services/luxury-body-care.png";
 import jacuzzi from "../assets/services/jacuzzi.png";
 
 // One representative image per category

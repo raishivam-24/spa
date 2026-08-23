@@ -124,66 +124,42 @@ export const services = [
         name: "Traditional Thai Massage",
         description:
           "A traditional Thai massage influenced by yoga and traditional South East Asian medicine; a dry therapy that releases overall stress and blocked energy.",
-        pricing: [
-          { duration: "60 Minutes", price: 2500 },
-          { duration: "90 Minutes", price: 3700 },
-          { duration: "120 Minutes", price: 4800 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 999 }, { duration: "90 Minutes", price: 1599 }, { duration: "120 Minutes", price: 2199 }],
         image: "/assets/services/traditional-thai-massage.png", // optional individual service image
       },
       {
         name: "Aroma Therapy (Relaxation)",
         description:
           "An aromatic massage using essential aroma oils with gentle pressure to relax the entire body and mind.",
-        pricing: [
-          { duration: "60 Minutes", price: 2600 },
-          { duration: "90 Minutes", price: 3900 },
-          { duration: "120 Minutes", price: 5000 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 999 }, { duration: "90 Minutes", price: 1699 }, { duration: "120 Minutes", price: 2199 }],
         image: "/assets/services/aroma-therapy.png", // optional individual service image
       },
       {
         name: "Swedish Massage",
         description:
           "A circular-pressure massage technique that releases lactic acid from tissue, includes tapping and stretching to improve flexibility and release body pain.",
-        pricing: [
-          { duration: "60 Minutes", price: 2700 },
-          { duration: "90 Minutes", price: 3900 },
-          { duration: "120 Minutes", price: 5000 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 1199 }, { duration: "90 Minutes", price: 1899 }, { duration: "120 Minutes", price: 2499 }],
         image: "/assets/services/swedish-massage.png", // optional individual service image
       },
       {
         name: "Balinese Massage",
         description:
           "Includes gentle stretch, acupressure, reflexology, and aroma therapy to stimulate blood flow, oxygen, and energy for wellness and calm.",
-        pricing: [
-          { duration: "60 Minutes", price: 2800 },
-          { duration: "90 Minutes", price: 4000 },
-          { duration: "120 Minutes", price: 5200 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 1199 }, { duration: "90 Minutes", price: 1899 }, { duration: "120 Minutes", price: 2499 }],
         image: "/assets/services/balinese-massage.png", // optional individual service image
       },
       {
         name: "Deep Tissue (Muscle Pain Relief)",
         description:
           "An aroma oil massage with direct deep pressure on muscle tissues to relieve pain caused by tiredness and fatigue.",
-        pricing: [
-          { duration: "60 Minutes", price: 2900 },
-          { duration: "90 Minutes", price: 4100 },
-          { duration: "120 Minutes", price: 5200 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 1499 }, { duration: "90 Minutes", price: 2199 }, { duration: "120 Minutes", price: 2699 }],
         image: "/assets/services/deep-tissue-massage.png", // optional individual service image
       },
       {
         name: "Spasha Signature Body Massage",
         description:
           "A unique signature therapy for complete relaxation — stretching, acupressure, gentle palm pressure, and detoxification.",
-        pricing: [
-          { duration: "60 Minutes", price: 3000 },
-          { duration: "90 Minutes", price: 4200 },
-          { duration: "120 Minutes", price: 5600 },
-        ],
+        pricing: [{ duration: "60 Minutes", price: 1699 }, { duration: "90 Minutes", price: 2299 }, { duration: "120 Minutes", price: 2999 }],
         image: "/assets/services/spasha-signature-massage.png", // optional individual service image
       },
     ],
