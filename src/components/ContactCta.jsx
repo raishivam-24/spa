@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { CalendarCheck, MessageCircle, MapPin } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import { contactCta, business } from "../data/siteData";
 import "./ContactCta.css";
 
@@ -13,10 +14,10 @@ export default function ContactCta() {
         </div>
 
         <div className="cta-actions">
-          <a className="btn btn-gold" href={`tel:+91${business.phone}`}>
-            <Phone size={16} />
-            {business.phone}
-          </a>
+          <NavLink className="btn btn-gold" to="/book-appointment">
+              <CalendarCheck size={16} />
+              Book Now
+          </NavLink>
           <a className="btn btn-outline-light" href={contactCta.whatsappLink} target="_blank" rel="noreferrer">
             <MessageCircle size={16} />
             WhatsApp Us

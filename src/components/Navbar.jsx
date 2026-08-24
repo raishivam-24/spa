@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, MessageCircle, Phone } from "lucide-react";
-import { contactCta, business } from "../data/siteData";
+import { Menu, X, CalendarCheck, Phone } from "lucide-react";
+import { business } from "../data/siteData";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
-
+import logo from "../assets/logo.png"
 const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
@@ -62,10 +61,10 @@ export default function Navbar() {
             <Phone size={15} />
             Request Callback
           </a>
-          <a className="btn btn-gold" href={contactCta.whatsappLink} target="_blank" rel="noreferrer">
-            <MessageCircle size={16} />
+          <NavLink className="btn btn-gold" to="/book-appointment">
+            <CalendarCheck size={16} />
             Book Now
-          </a>
+          </NavLink>
         </div>
 
         <button
@@ -90,15 +89,14 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <a
+          <NavLink
             className="btn btn-gold navbar-mobile-cta"
-            href={contactCta.whatsappLink}
-            target="_blank"
-            rel="noreferrer"
+            to="/book-appointment"
+            onClick={() => setOpen(false)}
           >
-            <MessageCircle size={16} />
+            <CalendarCheck size={16} />
             Book Now
-          </a>
+          </NavLink>
         </div>
       )}
     </header>

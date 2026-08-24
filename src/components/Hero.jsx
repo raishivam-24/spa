@@ -1,11 +1,12 @@
-import { hero, business, contactCta } from "../data/siteData";
+import { hero, business } from "../data/siteData";
+import { NavLink } from "react-router-dom";
 import "./Hero.css";
 import logo from "../assets/logo.png";
 
 import {
   Phone,
-  MessageCircle,
-  Flower2,
+  // MessageCircle,
+  CalendarCheck,
   Clock3,
   Sparkles,
   MapPin
@@ -73,16 +74,16 @@ export default function Hero() {
 
           <div className="hero-actions">
 
-            <a
-              className="btn btn-gold"
-              href={contactCta.whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MessageCircle size={17} />
-              Book Your Spa Now
-            </a>
+            <NavLink className="btn btn-gold" to="/book-appointment">
+              <CalendarCheck size={16} />
+              Book Now
+            </NavLink>
 
+            <NavLink className="btn btn-outline-light" to="/services">
+              <Sparkles size={16} />
+              Explore Services
+            </NavLink>
+            
             <a
               className="btn btn-outline-light"
               href={`tel:+91${business.phone}`}

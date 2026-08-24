@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import BookAppointment from "./pages/BookAppointment";
 import NotFound from "./pages/NotFound";
 
 // Scrolls to top on every route change, and to a hash target when present
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/book-appointment" element={<BookAppointment />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
